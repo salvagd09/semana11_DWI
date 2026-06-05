@@ -14,7 +14,12 @@
 .boton-principal {
   margin-top: 18px;
 }
-
+.fecha{
+  display:flex;
+  width:100%;
+  align-items:center;
+  gap:10px;
+}
 .card-ok {
   border-left: 6px solid #16a34a;
 }

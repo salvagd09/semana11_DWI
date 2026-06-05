@@ -23,12 +23,28 @@
         <ion-select-option value="Soporte">App de soporte</ion-select-option>
       </ion-select>
     </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Ingresa el nombre del proyecto:</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+    <ion-item class="fecha">
+      <ion-label position="stacked">Ingresa el frontend del proyecto:</ion-label>
+      <ion-picker>
+        <ion-picker-column value="javascript">
+          <ion-picker-column-option value="" disabled="true">--</ion-picker-column-option>
+          <ion-picker-column-option value="javascript">React</ion-picker-column-option>
+          <ion-picker-column-option value="typescript">Angular</ion-picker-column-option>
+          <ion-picker-column-option value="rust">Vuejs</ion-picker-column-option>
+        </ion-picker-column>
+      </ion-picker>
+    </ion-item>
     <ion-button expand="block" color="danger" class="boton-principal" (click)="validarRegistro()">Validar
       registro</ion-button>
     <ion-button expand="block" fill="outline" color="medium" (click)="limpiar()">Limpiar</ion-button>
     <ion-button id="present-alert">Hazme click</ion-button>
     <ion-alert trigger="present-alert" header="Acerca de " subHeader="Los datos que ingresarás"
-      message="Estos datos no van a ser modificables y van a marcar la identidad de la aplicación." [buttons]="alertButtons"></ion-alert>
+      message="Estos datos no van a ser modificables y van a marcar la identidad de la aplicación."
+      [buttons]="alertButtons"></ion-alert>
     <ion-card *ngIf="mensaje" [class.card-ok]="registroValido" [class.card-error]="!registroValido">
       <ion-card-content>{{ mensaje }}</ion-card-content>
     </ion-card>
