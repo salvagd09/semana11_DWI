@@ -1,0 +1,28 @@
+.contenedor {
+  max-width: 520px;
+  margin: auto;
+}
+
+.titulo {
+  font-weight: 700;
+  color: #1f1f1f;
+}
+.mejorTexto{
+  font-weight:500;
+  color:#1f1f1f;
+}
+.boton-principal {
+  margin-top: 18px;
+}
+
+.card-ok {
+  border-left: 6px solid #16a34a;
+}
+
+.card-error {
+  border-left: 6px solid #c8102e;
+}
+
+ion-content {
+  --background: #f6f6f6;
+}
