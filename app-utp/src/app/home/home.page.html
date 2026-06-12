@@ -27,17 +27,6 @@
       <ion-label position="stacked">Ingresa el nombre del proyecto:</ion-label>
       <ion-input></ion-input>
     </ion-item>
-    <ion-item class="fecha">
-      <ion-label position="stacked">Ingresa el frontend del proyecto:</ion-label>
-      <ion-picker>
-        <ion-picker-column value="javascript">
-          <ion-picker-column-option value="" disabled="true">--</ion-picker-column-option>
-          <ion-picker-column-option value="javascript">React</ion-picker-column-option>
-          <ion-picker-column-option value="typescript">Angular</ion-picker-column-option>
-          <ion-picker-column-option value="rust">Vuejs</ion-picker-column-option>
-        </ion-picker-column>
-      </ion-picker>
-    </ion-item>
     <ion-button expand="block" color="danger" class="boton-principal" (click)="validarRegistro()">Validar
       registro</ion-button>
     <ion-button expand="block" fill="outline" color="medium" (click)="limpiar()">Limpiar</ion-button>
@@ -48,5 +37,11 @@
     <ion-card *ngIf="mensaje" [class.card-ok]="registroValido" [class.card-error]="!registroValido">
       <ion-card-content>{{ mensaje }}</ion-card-content>
     </ion-card>
+    <ion-button
+        expand="block"
+        color="danger"
+        routerLink="/detalle">
+        Continuar al detalle
+    </ion-button>
   </div>
 </ion-content>

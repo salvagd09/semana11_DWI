@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -12,7 +13,7 @@ export class HomePage {
   tipoApp: string = '';
   mensaje: string = '';
   registroValido: boolean = false;
-  constructor() { }
+  constructor(private router:Router) { }
   validarRegistro() {
     const correoValido =
       this.correo.includes('@') && this.correo.includes('.');
@@ -39,4 +40,9 @@ export class HomePage {
     this.registroValido = false;
   }
   alertButtons = ['Action'];
+  irADetalle() {
+    this.router.navigate(['/detalle'], {
+    queryParams: { tipo: this.tipoApp }
+    });
+  }
 }
