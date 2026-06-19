@@ -1,19 +1,19 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
-import { ResumenRegistroComponent } from './resumen-registro.component';
+import { SelectorTipoComponent } from './selector-tipo.component';
 
-describe('ResumenRegistroComponent', () => {
-  let component: ResumenRegistroComponent;
-  let fixture: ComponentFixture<ResumenRegistroComponent>;
+describe('SelectorTipoComponent', () => {
+  let component: SelectorTipoComponent;
+  let fixture: ComponentFixture<SelectorTipoComponent>;
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ ResumenRegistroComponent ],
+      declarations: [ SelectorTipoComponent ],
       imports: [IonicModule.forRoot()]
     }).compileComponents();
 
-    fixture = TestBed.createComponent(ResumenRegistroComponent);
+    fixture = TestBed.createComponent(SelectorTipoComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   }));

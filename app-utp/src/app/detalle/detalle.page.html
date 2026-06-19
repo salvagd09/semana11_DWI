@@ -4,13 +4,11 @@
   </ion-toolbar>
 </ion-header>
 <ion-content class="ion-padding">
-  <h1>Detalle de registro</h1>
-  <ion-card>
-    <ion-card-header>
-      <ion-card-title>Tipo recibido</ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-      {{ tipo }}
-    </ion-card-content>
-  </ion-card>
+  <h1>Comunicación entre componentes</h1>
+  <app-resumen-app [tipo]="tipoApp"></app-resumen-app>
+  <app-selector-tipo (tipoCambiado)="actualizarTipo($event)">
+  </app-selector-tipo>
+  <ion-button expand="block" fill="clear" routerLink="/home" >
+    Volver a Home
+  </ion-button>
 </ion-content>

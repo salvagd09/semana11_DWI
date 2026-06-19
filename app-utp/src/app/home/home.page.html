@@ -30,7 +30,6 @@
     <ion-button expand="block" color="danger" class="boton-principal" (click)="validarRegistro()">Validar
       registro</ion-button>
     <ion-button expand="block" fill="outline" color="medium" (click)="limpiar()">Limpiar</ion-button>
-    <ion-button id="present-alert">Hazme click</ion-button>
     <ion-alert trigger="present-alert" header="Acerca de " subHeader="Los datos que ingresarás"
       message="Estos datos no van a ser modificables y van a marcar la identidad de la aplicación."
       [buttons]="alertButtons"></ion-alert>
@@ -40,7 +39,8 @@
     <ion-button
         expand="block"
         color="danger"
-        routerLink="/detalle">
+        [routerLink]="['/detalle']"
+        [queryParams]="{ tipoApp: tipoApp }">
         Continuar al detalle
     </ion-button>
   </div>

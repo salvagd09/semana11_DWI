@@ -13,8 +13,9 @@ import { DetallePage } from './detalle.page';
     CommonModule,
     FormsModule,
     IonicModule,
-    DetallePageRoutingModule
+    DetallePageRoutingModule,
+    DetallePage 
   ],
-  declarations: [DetallePage]
+  declarations:[]
 })
 export class DetallePageModule {}
